@@ -9,27 +9,36 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="303dp"
-        android:layout_height="185dp"
-        android:orientation="vertical"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089">
+        app:layout_constraintVertical_bias="0.047">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo_white_cropped" />
+        <TextView
+            android:id="@+id/result_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="320dp"
-        android:layout_height="326dp"
+        android:layout_width="310dp"
+        android:layout_height="351dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginEnd="50dp"
@@ -37,10 +46,9 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649">
+        app:layout_constraintVertical_bias="0.664">
 
         <TextView
             android:id="@+id/text_latitude"
@@ -73,21 +81,6 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/text_city"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ville :"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/result_city"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
-
-        <TextView
             android:id="@+id/text_weather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,18 +100,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Switch" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

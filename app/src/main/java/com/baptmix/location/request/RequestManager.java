@@ -45,7 +45,6 @@ public class RequestManager {
             result.append(line);
         }
         rd.close();
-        Log.d("BAPTMIX", result.toString());
 
         Reader reader = null;
         try {
@@ -56,17 +55,20 @@ public class RequestManager {
             JSONArray weather_array = new JSONArray(String.valueOf(data.getAsJsonArray("weather")));
             JSONObject weather_objet = new JSONObject(weather_array.getString(0));
             String temps = weather_objet.get("main").toString();
+            if(temps.equals("Clouds")) {
+                temps = "Nuageux";
+            }
+            if(temps.equals("Rain")) {
+                temps = "Pluvieux";
+            }
+            if(temps.equals("Clear")) {
+                temps = "Ensoleillé";
+            }
             String icon = weather_objet.get("icon").toString();
             MainActivity.result_city.setText(ville);
             MainActivity.result_weather.setText(temps);
         } catch(Exception ex) {
             ex.printStackTrace();
         }
-    }
-
-    public static void getWeather(Double latitude, Double longitude) {
-        /*
-        https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=14533254e36aae2dc2f7a6a1c69d6071
-         */
     }
 }
